@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini CRM Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Mini CRM Dashboard</h1>
+
+    <div class="form-section">
+
+        <h2>Add New Lead</h2>
+
+        <input type="text" id="name" placeholder="Lead Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="source" placeholder="Source">
+
+        <textarea id="notes" placeholder="Notes"></textarea>
+
+        <button onclick="addLead()">Add Lead</button>
+
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Leads" onkeyup="searchLead()">
+    </div>
+<div class="stats">
+    <div class="card">
+        <h2 id="totalLeads">0</h2>
+        <p>Total Leads</p>
+    </div>
+
+    <div class="card">
+        <h2 id="newLeads">0</h2>
+        <p>New</p>
+    </div>
+
+    <div class="card">
+        <h2 id="contactedLeads">0</h2>
+        <p>Contacted</p>
+    </div>
+
+    <div class="card">
+        <h2 id="convertedLeads">0</h2>
+        <p>Converted</p>
+    </div>
+</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="leadTable">
+
+        </tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
